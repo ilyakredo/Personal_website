@@ -35,12 +35,12 @@
 
 @media (max-width: 768px) {
     .mode {
-        padding: 0 6vw 0 10vw;
+        padding-left: 5vw;
     }
 
     .mode svg {
-        width: 3vw;
-        height: 3vw;
+        width: 5vw;
+        height: 5vw;
     }
     
 }

@@ -123,7 +123,7 @@
     }
     
     .portfolioHeading > div {
-        font-size: 1.8vw;
+        font-size: 2.8vw;
         padding: 0.6vw 1.2vw;
     }
     
@@ -143,15 +143,15 @@
     }
     
     .triggerWrapper {
-        top: -2.5vw;
-        left: calc(50% - 9vw);
-        height: 5vw;
-        width: 18vw;
+        top: -3.5vw;
+        left: calc(50% - 12vw);
+        height: 7vw;
+        width: 24vw;
     }
 
     .triggerInnerWrapper {
-        height: 4.5vw;
-        width: 16vw;
+        height: 5.5vw;
+        width: 20vw;
         gap: 0.8vw;
     }
     
@@ -159,9 +159,15 @@
         height: 3.5vw;
         width: 3.5vw;
     }
+
+    
+    .portfolio_dark .triggerInnerWrapper {
+        background-color: var(--primary-light-grey);
+    }
+    
     
     .triggerInnerWrapper .loadMsg {
-        font-size: 1.8vw;
+        font-size: 2.8vw;
     }
     
     .addSpace {

@@ -3,7 +3,12 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import classes from "./Mode.module.css";
 import { BASE_MODE } from "../../../../assets/constants";
 
-export const Mode = ({ mode, onChangeMode }) => {
+export const Mode = ({ mode, onChangeMode, setRespMenuShow }) => {
+  const handleClick = () => {
+    onChangeMode();
+    setRespMenuShow(false);
+  };
+
   return (
     <div className={classes.mode}>
       <div
@@ -12,7 +17,7 @@ export const Mode = ({ mode, onChangeMode }) => {
             ? classes.modeWrapper
             : `${classes.modeWrapper} ${classes.modeWrapper_dark}`
         }
-        onClick={onChangeMode}
+        onClick={handleClick}
       >
         {mode === BASE_MODE ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
       </div>

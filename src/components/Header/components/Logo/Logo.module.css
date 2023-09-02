@@ -39,10 +39,11 @@
 
 @media (max-width: 768px) {
     .logo {
-        font-size: 5vw;
+        font-size: 8vw;
+        padding-bottom: 2vw;
     }
 
     .logo .logoText {
-        font-size: 6vw;
+        font-size: 9vw;
     }
 }

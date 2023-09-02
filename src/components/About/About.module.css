@@ -95,7 +95,7 @@
     }
     
     .aboutHeading > div {
-        font-size: 1.8vw;
+        font-size: 2.8vw;
         padding: 0.6vw 1.2vw;
     }
     
@@ -109,8 +109,8 @@
     }
 
     .aboutDescription h3 {
-        font-size: 3vw;
-        padding-bottom: 1.5vw;
+        font-size: 4vw;
+        padding-bottom: 3vw;
     }
     
     .aboutDescription h3 span{
@@ -118,8 +118,8 @@
     }
     
     .aboutDescription p {
-        font-size: 2.2vw;
-        line-height: 1.7;
+        font-size: 3vw;
+        line-height: 2;
         padding-right: 0;
     }
 

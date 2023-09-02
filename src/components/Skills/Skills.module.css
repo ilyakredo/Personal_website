@@ -55,7 +55,7 @@
     }
     
     .skillsHeading div {
-        font-size: 1.8vw;
+        font-size: 2.8vw;
         padding: 0.6vw 1.2vw;
     }
     
@@ -68,7 +68,7 @@
         grid-template-rows: repeat(3, auto);
         grid-template-columns: repeat(4, 1fr);
         gap: 2vw;
-        grid-row-gap: 7vw;
+        grid-row-gap:12vw;
     }
 
 }

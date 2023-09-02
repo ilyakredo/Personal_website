@@ -10,7 +10,7 @@
 @media (max-width: 768px) {
     .resumeItem {
         margin: 0 1.5vw;
-        padding-bottom: 1.5vw;
-        gap: 1vw;
+        padding: 2.5vw 0;
+        gap: 1.5vw;
     }
 }

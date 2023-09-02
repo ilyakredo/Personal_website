@@ -82,7 +82,7 @@
     width: 100%;
     height: 100%;
     padding: 3vw 8vw;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,7 +146,38 @@
     }
 
     .overlay .description {
-        font-size: 2vw;
+        font-size: 2.6vw;
         padding-top: 2vw;
+    }
+
+    .overlay .techWrapper {
+        gap: 2vw;
+    }
+
+    .overlay .techWrapper svg {
+        height: 2.8vw;
+        width: 2.8vw;
+    }
+
+    .popupOverlay {
+        padding: 3vw 3vw;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .popupContent {
+        padding-top: 30%;
+    }
+    
+    .closeBtnWrapper {
+        position: absolute;
+        top: 5vw;
+        right: 5vw;
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .closeBtnWrapper .closeBtn {
+        height: 5vw;
+        width: 5vw;
     }
 }

@@ -32,13 +32,20 @@
 
 @media (max-width: 768px) { 
     .detailItem p{
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 
     .detailItem p:first-child{
-        font-size: 2vw;
+        font-size: 2.5vw;
         padding-bottom: 1vw;
         font-weight: 700;
-        color: var(--secondary-color);
+        color: var(--primary-light-dark);
+    }
+
+    .detailItem_dark p:first-child{
+        font-size: 2.5vw;
+        padding-bottom: 1vw;
+        font-weight: 700;
+        color: var(--primary-light-grey);
     }
 }

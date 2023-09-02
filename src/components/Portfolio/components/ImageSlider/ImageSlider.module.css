@@ -9,8 +9,22 @@ button[data-type="prev"] {
     margin-left: 1vw;
 }
 
-[data-type="next"] {
+button[data-type="next"] {
     height:4vw !important;
     width: 4vw !important;
     margin-right: 1vw;
+}
+
+@media (max-width: 768px) {
+    button[data-type="prev"] {
+        height:5vw !important;
+        width: 5vw !important;
+        margin-left: 5vw;
+    }
+    
+    button[data-type="next"] {
+        height:5vw !important;
+        width: 5vw !important;
+        margin-right: 5vw;
+    }
 }

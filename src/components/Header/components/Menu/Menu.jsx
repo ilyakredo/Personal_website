@@ -1,12 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import classes from "./Menu.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { scrollToSection } from "../../../../helpers/scrolling";
 import { BASE_MODE } from "../../../../assets/constants";
 
-export const Menu = ({ activeSection, mode }) => {
+export const Menu = ({
+  activeSection,
+  mode,
+  respMenuShow,
+  setRespMenuShow,
+}) => {
   const menuRef = useRef();
-  const [respMenuShow, setRespMenuShow] = useState(false);
 
   const showMenu = () => {
     setRespMenuShow(!respMenuShow);
@@ -65,8 +69,15 @@ export const Menu = ({ activeSection, mode }) => {
           <a href="#contact">contact</a>
         </li>
       </ul>
-      <div className={classes.navBtnWrapper} onClick={showMenu}>
-        {respMenuShow ? <FaBars /> : <FaTimes />}
+      <div
+        className={
+          mode === BASE_MODE
+            ? classes.navBtnWrapper
+            : `${classes.navBtnWrapper} ${classes.navBtnDarkWrapper}`
+        }
+        onClick={showMenu}
+      >
+        {!respMenuShow ? <FaBars /> : <FaTimes />}
       </div>
     </div>
   );

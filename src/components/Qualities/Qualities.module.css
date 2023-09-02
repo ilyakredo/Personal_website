@@ -13,12 +13,7 @@
 }
 
 @media (max-width: 768px) {
-    .qualitiesWrapper {
-        min-height: auto;
-        padding: 4vw 8vw;
-        grid-template-rows: repeat(2, auto);
-        grid-template-columns: repeat(2, 1fr);
-        gap: 4vw;
+    .qualities{
+        display: none;
     }
-
 }

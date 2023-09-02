@@ -14,3 +14,11 @@
     display: inline-block;
     white-space: nowrap;
 }
+
+@media (max-width: 768px) {
+    .popup {
+        font-size: 2.7vw;
+        bottom: -5.5vw; 
+        left: 0.5vw;
+    }
+}

@@ -36,15 +36,6 @@
 
 @media (max-width: 768px) {
     .socialWrapper {
-        width: 20%;    
-    }
-
-    .socialWrapper ul {
-        gap: 2vw;
-    }
-
-    .socialWrapper svg {
-        height: 3vw;
-        width: 3vw;
+        display: none;   
     }
 }

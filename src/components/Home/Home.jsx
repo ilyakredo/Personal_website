@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import classes from "./Home.module.css";
-import photo from "../../assets/images/photo.png";
+import photo from "../../assets/images/photo_640_min.png";
 import { scrollToSection } from "../../helpers/scrolling";
 
 export const Home = () => {

@@ -129,7 +129,7 @@ h1 {
   }
   
   .greetLocation {
-    font-size: 2.8vw;
+    font-size: 3.5vw;
   }
 
   .handleWrapper {
@@ -141,12 +141,12 @@ h1 {
   }
 
   .handleWrapper button {
-    font-size: 1.8vw;
+    font-size: 2.8vw;
     padding: 2vw 4vw;
   }
   
   .handleWrapper a {
-    font-size: 2vw;
+    font-size: 2.8vw;
   }
 
   .photoWrapper {
@@ -156,7 +156,7 @@ h1 {
   }
   
   .photoWrapper img {
-    width: 60vh;
-    margin-top: 4.5vw;
+    width: 45vh;
+    margin-top: 10vw;
   }
 }

@@ -211,7 +211,7 @@
     }
     
     .contactWrapper p {
-        font-size: 2.2vw;
+        font-size: 3.2vw;
         line-height: 3.5vw;
     }
     
@@ -228,12 +228,13 @@
         width: 100%;
         display: flex;
         align-items: center;
-        gap:5vw;
+        gap:7vw;
+        padding: 3vw 0 2vw 0;
     }
     
     .social svg {
-        height: 4vw;
-        width: 4vw;
+        height: 5vw;
+        width: 5vw;
     }
     
     .formWrapper {
@@ -250,19 +251,19 @@
     }
     
     .formWrapper label {
-        font-size: 2.2vw;
+        font-size: 3.2vw;
     }
     
     .formWrapper input {
-        height: 7vw;
+        height: 8vw;
         padding: 0 1.5vw;
-        font-size: 2.5vw;
+        font-size: 3.2vw;
     }
     
     .formWrapper textarea {
-        height: 20vw;
+        height: 24vw;
         padding: 1.5vw 1.5vw 0 1.5vw;
-        font-size: 2.5vw;
+        font-size: 3.2vw;
     }
     
     .formControls {
@@ -276,7 +277,7 @@
     }
     
     .statusMessage .msgSuccess {
-        font-size: 2.5vw;
+        font-size: 2.7vw;
         padding-left: 2vw;
     }
     
