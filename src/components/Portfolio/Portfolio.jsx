@@ -6,6 +6,7 @@ import classes from "./Portfolio.module.css";
 import { portfolioDataArr } from "../../assets/data/data";
 import { PortfolioItem } from "./components/PortfolioItem/PortfolioItem";
 import { scrollToBottom, smoothScrollByPixels } from "../../helpers/scrolling";
+import { BASE_MODE } from "../../assets/constants";
 
 export const Portfolio = ({ mode }) => {
   const [showAll, setShowAll] = useState(false);
@@ -37,7 +38,7 @@ export const Portfolio = ({ mode }) => {
     <section
       id="portfolio"
       className={
-        mode === "light"
+        mode === BASE_MODE
           ? classes.portfolio
           : `${classes.portfolio} ${classes.portfolio_dark}`
       }

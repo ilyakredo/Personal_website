@@ -1,11 +1,12 @@
 import React from "react";
 import classes from "./DataItem.module.css";
+import { BASE_MODE } from "../../../../../assets/constants";
 
 export const DataItem = ({ icon, data, dataDesc, important, mode }) => {
   return (
     <div
       className={
-        mode === "light"
+        mode === BASE_MODE
           ? classes.dataItem
           : `${classes.dataItem} ${classes.dataItem_dark}`
       }

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import classes from "./Menu.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { scrollToSection } from "../../../../helpers/scrolling";
+import { BASE_MODE } from "../../../../assets/constants";
 
 export const Menu = ({ activeSection, mode }) => {
   const menuRef = useRef();
@@ -16,7 +17,7 @@ export const Menu = ({ activeSection, mode }) => {
     <div className={classes.menuWrapper}>
       <ul
         className={
-          mode === "light"
+          mode === BASE_MODE
             ? classes.menu
             : `${classes.menu} ${classes.menu_dark}`
         }

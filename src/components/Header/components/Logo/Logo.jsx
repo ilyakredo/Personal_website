@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Logo.module.css";
 import { scrollToSection } from "../../../../helpers/scrolling";
+import { BASE_MODE } from "../../../../assets/constants";
 
 export const Logo = ({ mode }) => {
   return (
@@ -10,7 +11,7 @@ export const Logo = ({ mode }) => {
     >
       <p
         className={
-          mode === "light"
+          mode === BASE_MODE
             ? classes.logo
             : `${classes.logo} ${classes.logo_dark}`
         }

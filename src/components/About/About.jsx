@@ -7,6 +7,7 @@ import { qualityArr } from "../../assets/data/data";
 import { detailsArr } from "../../assets/data/data";
 import { DetailItem } from "./components/DetailItem/DetailItem";
 import { aboutInfo } from "../../assets/data/data";
+import { BASE_MODE } from "../../assets/constants";
 
 export const About = ({ mode }) => {
   useEffect(() => {
@@ -17,14 +18,14 @@ export const About = ({ mode }) => {
     <section
       id="about"
       className={
-        mode === "light"
+        mode === BASE_MODE
           ? classes.about
           : `${classes.about} ${classes.about_dark}`
       }
     >
       <div className={classes.aboutWrapper}>
         <div className={classes.aboutHeading}>
-          <div className={mode === "light" ? "" : classes.sectionLable}>
+          <div className={mode === BASE_MODE ? "" : classes.sectionLable}>
             About Me
           </div>
           <h2>Know Me More</h2>

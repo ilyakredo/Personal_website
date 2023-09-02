@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classes from "./SkillsItem.module.css";
+import { BASE_MODE } from "../../../../assets/constants";
 
 export const SkillsItem = ({ icon, title, url, percentage, color, mode }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -13,16 +14,14 @@ export const SkillsItem = ({ icon, title, url, percentage, color, mode }) => {
   };
 
   const iconStyles = {
-    fill: isHovered ? `${color}` : `${mode === "light" ? "#555" : "#5edcfc"}`,
-    // fill: isHovered ? `${color}` : `${mode === "light" ? "#555" : "#007bff"}`,
-
+    fill: isHovered ? `${color}` : `${mode === BASE_MODE ? "#555" : "#5edcfc"}`,
     transition: "all 0.3s ease",
   };
 
   return (
     <div
       className={
-        mode === "light"
+        mode === BASE_MODE
           ? classes.skillsItem
           : `${classes.skillsItem} ${classes.skillsItem_dark}`
       }

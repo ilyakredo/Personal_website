@@ -9,13 +9,6 @@ import {
 } from "react-icons/fa6";
 import classes from "./ResumeItem.module.css";
 import { DataItem } from "./DataItem/DataItem";
-import eduTitleIcon from "../../../../assets/icons/trophy-solid.svg";
-import institutionIcon from "../../../../assets/icons/building-columns-solid.svg";
-import clockIcon from "../../../../assets/icons/clock-solid.svg";
-import infoIcon from "../../../../assets/icons/circle-info-solid.svg";
-import jobTitleIcon from "../../../../assets/icons/briefcase-solid.svg";
-import employerIcon from "../../../../assets/icons/building-user-solid.svg";
-import starIcon from "../../../../assets/icons/star-solid.svg";
 
 export const ResumeItem = ({ data, subject, mode }) => {
   return (

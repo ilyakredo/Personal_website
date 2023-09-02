@@ -14,7 +14,6 @@ export const Home = () => {
   return (
     <section id="home" className={classes.home}>
       <div className={classes.homeWrapper}>
-        {/* <div className={classes.homeInnerWrapper}> */}
         <div className={classes.greetWrapper}>
           <h1>Hi, my name is Illia, I'm a</h1>
           <p className={classes.runningMessage}>
@@ -43,7 +42,6 @@ export const Home = () => {
           <img data-aos="zoom-in" src={photo} alt="me" />
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 };

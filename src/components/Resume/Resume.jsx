@@ -5,6 +5,7 @@ import classes from "./Resume.module.css";
 import { educationDataArr, experienceDataArr } from "../../assets/data/data";
 import { ResumeItem } from "./components/ResumeItem/ResumeItem";
 import cv from "../../assets/CV_Illia_Moiseienko.pdf";
+import { BASE_MODE } from "../../assets/constants";
 
 export const Resume = ({ mode }) => {
   useEffect(() => {
@@ -16,7 +17,7 @@ export const Resume = ({ mode }) => {
       id="resume"
       // className={classes.resume}
       className={
-        mode === "light"
+        mode === BASE_MODE
           ? classes.resume
           : `${classes.resume} ${classes.resume_dark}`
       }

@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import classes from "./Skills.module.css";
 import { SkillsItem } from "./components/SkillsItem/SkillsItem";
 import { skillsArr } from "../../assets/data/data";
+import { BASE_MODE } from "../../assets/constants";
 
 export const Skills = ({ mode }) => {
   useEffect(() => {
@@ -13,7 +14,7 @@ export const Skills = ({ mode }) => {
     <section
       id="skills"
       className={
-        mode === "light"
+        mode === BASE_MODE
           ? classes.skills
           : `${classes.skills} ${classes.skills_dark}`
       }

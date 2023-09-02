@@ -2,7 +2,6 @@
     box-sizing: border-box;
     width: 100%;
     background-color: var(--primary-color);
-    /* font-family: 'Raleway', sans-serif; */
     padding: 6vw 8vw 6vw 8vw;
     display: flex;
     gap: 4vw;
