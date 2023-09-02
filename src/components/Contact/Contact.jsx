@@ -56,10 +56,10 @@ export const Contact = () => {
     setStatusMessage("");
     emailjs
       .sendForm(
-        "service_imtlodd",
-        "template_huzfm2d",
+        "service_gojmoo2",
+        "template_d7226vm",
         form.current,
-        "h2HyprAQHDHpu5lMv"
+        "L64EYKuoQd2w2_xdG"
       )
       .then(
         (result) => {
