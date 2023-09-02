@@ -1,0 +1,46 @@
+.mode {
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modeWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2vw;
+    padding: 0.35vw;
+    border-radius: 50%;
+}
+
+.modeWrapper:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.mode svg {
+    width: 1.7vw;
+    height: 1.7vw;
+    transition: all 0.15s ease-in;
+}
+
+.modeWrapper_dark svg {
+    fill: var(--primary-light-grey);
+}
+
+.modeWrapper_dark:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .mode {
+        padding: 0 6vw 0 10vw;
+    }
+
+    .mode svg {
+        width: 3vw;
+        height: 3vw;
+    }
+    
+}

@@ -1,0 +1,333 @@
+.home {
+    min-height: calc(100vh - 6vw);
+    width: 100%;
+    background-color: var(--primary-color);
+    margin-top: 6vw;
+    font-family: 'Raleway', sans-serif;
+}
+
+.homeWrapper {
+    padding: 0 8vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greetWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 5vw;
+  width: 65%;
+}
+
+h1 {
+    font-size: 3.8vw;
+    margin: 0;
+    font-weight: 100;
+}
+
+.runningMessage {
+  font-size: 8vw;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+}
+
+.greetMessage {
+  margin: 0;
+  font-size: 3.8vw;
+}
+
+.greetLocation {
+  margin: 0;
+  font-size: 1.4vw;
+  padding-top: 2vw;
+  font-weight: 500;
+}
+
+/* .greetMessage span {
+  letter-spacing: 0.3vw;
+  font-weight: 700;
+} */
+
+/* .greetMessage:nth-child(2) {
+    padding-top: 0.5vw;
+} */
+
+.handleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  margin-top: 3vw;
+}
+
+.handleWrapper button {
+  border: none;
+  background-color: var(--primary-dark);
+  color: var(--primary-light-color);
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  font-size: 1.2vw;
+  padding: 1.3vw 2.6vw;
+  transition: background-color 0.2s ease-in;
+}
+
+.handleWrapper button:hover {
+  background-color: var(--primary-light-dark);
+  cursor: pointer;
+}
+
+.handleWrapper a {
+  font-size: 1.4vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1vw;
+  color: var(--primary-dark);
+}
+
+.handleWrapper a:hover {
+  text-decoration: none;
+}
+
+.photoWrapper {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.photoWrapper img {
+  width: 32vw;
+  margin-top: 4.5vw;
+  filter: grayscale(100%);
+}
+
+@media (max-width: 768px) {
+  .home {
+    min-height: auto;
+    padding-top: 3vw;
+  }
+
+  .homeWrapper {
+    flex-direction: column-reverse;
+  }
+
+  .greetWrapper {
+    align-items: center;
+    width: 100%;
+  }
+  
+  h1 {
+      font-size: 6vw;
+      padding-bottom: 2vw;
+  }
+  
+  .runningMessage {
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .greetMessage {
+    padding-top: 1vw;
+    font-size: 6vw;
+  }
+  
+  .greetLocation {
+    font-size: 2.8vw;
+  }
+
+  .handleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 15vw;
+    padding-top: 4vw;
+    padding-bottom: 10vw;
+  }
+
+  .handleWrapper button {
+    font-size: 1.8vw;
+    padding: 2vw 4vw;
+  }
+  
+  .handleWrapper a {
+    font-size: 2vw;
+  }
+
+  .photoWrapper {
+    padding-top: 4vw;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .photoWrapper img {
+    width: 60vh;
+    margin-top: 4.5vw;
+  }
+}
+
+/* 
+@media (max-width: 1479px) {
+  .home {
+    min-height: calc(90vh - 6vw);
+    
+  }
+}
+
+@media (max-width: 1279px) {
+  .home {
+    min-height: calc(80vh - 6vw);
+    
+  }
+}
+
+@media (max-width: 960px) {
+  
+  .homeWrapper {
+    padding: 0 4vw;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .greetWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vw;
+    width: 100%;
+  }
+  
+  h1 {
+      font-size: 5vw;
+      margin: 0;
+      font-weight: 100;
+  }
+  
+  .runningMessage {
+    font-size: 11vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .greetMessage {
+    margin: 0;
+    font-size: 5vw;
+  }
+  
+  .greetLocation {
+    margin: 0;
+    font-size: 2.4vw;
+    padding-top: 4vw;
+    font-weight: 500;
+  }
+  
+  .handleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    margin-top: 4vw;
+  }
+  
+  .handleWrapper button {
+    border: none;
+    background-color: var(--primary-dark);
+    color: var(--primary-light-color);
+    text-transform: uppercase;
+    letter-spacing: 0.2vw;
+    font-size: 1.3vw;
+    padding: 1.5vw 3vw;
+    transition: background-color 0.2s ease-in;
+  }
+  
+  .handleWrapper button:hover {
+    background-color: var(--primary-light-dark);
+    cursor: pointer;
+  }
+  
+  .handleWrapper a {
+    font-size: 1.6vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
+    color: var(--primary-dark);
+  }
+  
+  .handleWrapper a:hover {
+    text-decoration: none;
+  }
+
+  .photoWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4vw;
+  }
+  
+  .photoWrapper img {
+    width: 40vw;
+    margin-top: 4.5vw;
+    filter: grayscale(100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    min-height: calc(100vh - 6vw);
+  }
+
+  .greetWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vw;
+    width: 100%;
+  }
+  
+  h1 {
+      font-size: 6vw;
+  }
+  
+  .greetMessage {
+    font-size: 6vw;
+  }
+  
+  .greetLocation {
+    font-size: 2.8vw;
+    padding-top: 4vw;
+  }
+  
+  .handleWrapper button {
+    font-size: 3vw;
+    padding: 1.5vw 3vw;
+  }
+  
+  .handleWrapper button:hover {
+    background-color: var(--primary-light-dark);
+    cursor: pointer;
+  }
+  
+  .handleWrapper a {
+    font-size: 2.5vw;
+  }
+
+  .photoWrapper {
+    padding-top: 2vw;
+  }
+
+  .photoWrapper img {
+    margin-top: 4vw;
+    width: 80vw;
+  }
+}
+ */

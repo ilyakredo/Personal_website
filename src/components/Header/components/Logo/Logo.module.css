@@ -1,0 +1,48 @@
+.logoWrapper {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 100%;
+    font-family: 'Pacifico', cursive;
+    font-weight: 700;
+    font-size: 3vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.logo .logoText {
+    color: var(--primary-light-dark);
+    font-size: 4vw;
+    padding-bottom: 0.8vw;
+    margin-left: -0.1vw;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+
+.logo span {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.logo_dark .logoText {
+    color: var(--primary-light-grey);
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 5vw;
+    }
+
+    .logo .logoText {
+        font-size: 6vw;
+    }
+}

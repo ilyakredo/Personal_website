@@ -1,0 +1,53 @@
+.dataItem {
+    display: flex;
+    gap: 1vw;
+}
+
+.iconWrapper {
+    width: 1.5vw;
+    display: flex;
+    align-items: center;
+}
+
+
+svg {
+    width: 1.5vw;
+    height: 1.5vw;
+    fill: var(--primary-light-dark);
+}
+
+.dataItem_dark svg {
+    fill: var(--primary-light-grey);
+}
+
+
+.dataItem p {
+    font-size: 1.2vw;
+}
+
+.dataItem span {
+    font-weight: 700;
+}
+
+.dataItem .marked {
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .dataItem {
+        gap: 1.5vw;
+    }
+    
+    .dataItem img {
+        width: 2.5vw;
+    }
+    
+    .dataItem p {
+        font-size: 2.2vw;
+    }
+    
+    .dataItem .marked {
+        font-size: 2.5vw;
+    }
+}

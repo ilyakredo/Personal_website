@@ -1,0 +1,137 @@
+.about {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--primary-light-color);
+    padding: 6vw 8vw;
+}
+
+.about_dark {
+    background-color: var(--bg-dark);
+    color: var(--primary-light-grey);
+}
+
+.aboutWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutHeading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.aboutHeading  div {
+    background-color: var(--primary-color);
+    font-size: 1.2vw;
+    padding: 0.4vw 0.8vw;
+}
+
+.about_dark .sectionLable {
+    color: var(--primary-light-dark);
+}
+
+.aboutHeading > h2 {
+    font-size: 3vw;
+    padding-bottom: 4.5vw;
+}
+
+.aboutInfoWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.aboutDescription {
+    width: 55%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutDescription h3 {
+    font-size: 2vw;
+    padding-bottom: 1.5vw;
+}
+
+.aboutDescription h3 span{
+    border-bottom: 0.3vw solid var(--primary-color); 
+}
+
+.aboutDescription p {
+    font-size: 1.5vw;
+    line-height: 1.5;
+    padding-right: 1.5vw;
+}
+
+.aboutQualitiesWrapper {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5vw;
+}
+
+.aboutDetails {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6vw;
+}
+
+@media (max-width: 768px) {
+    .about {
+        min-height: auto;
+        padding: 10vw 8vw;
+    }
+
+    .aboutHeading {
+        gap: 2vw;
+    }
+    
+    .aboutHeading > div {
+        font-size: 1.8vw;
+        padding: 0.6vw 1.2vw;
+    }
+    
+    .aboutHeading > h2 {
+        font-size: 5vw;
+        padding-bottom: 6vw;
+    }
+
+    .aboutDescription {
+        width: 100%;
+    }
+
+    .aboutDescription h3 {
+        font-size: 3vw;
+        padding-bottom: 1.5vw;
+    }
+    
+    .aboutDescription h3 span{
+        border-bottom: 0.3vw solid var(--primary-color); 
+    }
+    
+    .aboutDescription p {
+        font-size: 2.2vw;
+        line-height: 1.7;
+        padding-right: 0;
+    }
+
+    .aboutQualitiesWrapper {
+        display: none;
+    }
+
+    .aboutDetails {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-gap: 6vw; 
+    }
+
+}

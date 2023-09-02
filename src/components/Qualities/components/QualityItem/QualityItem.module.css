@@ -1,0 +1,110 @@
+.qualityItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    border: 2px solid rgb(86, 86, 86);
+    border-radius: 10px;
+    padding: 1vw 1.7vw;
+    color: var(--primary-light-grey);
+    height: 100%;
+    transition: all 0.3s ease-in;
+}
+
+.qualityItem:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.qualityItem:hover .iconWrapper {
+    transform: scale(1.1);
+}
+
+.qualityItem:hover svg {
+    transform: rotate(360deg);
+}
+
+.heading {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vw;
+}
+
+.description {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.qualityItem h3 {
+    color: var(--primary-light-text);
+    line-height: 2.5vw;
+    font-size: 1.7vw;  
+    text-align: center;
+}
+
+.qualityItem p {
+    color: var(--primary-dark);
+    font-size: 1.4vw;
+    text-align: center;
+    line-height: 2.3vw;
+    font-weight: 700;
+}
+
+.iconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;background-color: var(--primary-color);
+    height: 4vw;
+    width: 4vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -2vw;
+    left: -2vw;
+    transition: all 0.3s ease-in;
+}
+
+.iconWrapper svg {
+    fill: rgb(86, 86, 86);
+    height: 2.3vw;
+    width: 2.3vw;
+    transition: all 0.3s ease-in;
+}
+
+@media (max-width: 768px) {
+    .QualityItem {
+        gap: 1.5vw;
+        border: 3px dashed var(--primary-color);
+        border-radius: 10px;
+        padding: 1vw 1.7vw;
+        color: var(--primary-light-dark);
+        height: 100%;
+    }
+    
+    .QualityItem h3 {
+        font-size: 2.8vw;  
+    }
+    
+    .QualityItem p {
+        font-size: 1.8vw;
+        line-height: 2.3vw;
+    }
+    
+    .iconWrapper {
+        height: 5vw;
+        width: 5vw;
+        top: -2.5vw;
+        left: -2.5vw;
+    }
+    
+    .iconWrapper svg {
+        height: 3vw;
+        width: 3vw;
+    }
+}

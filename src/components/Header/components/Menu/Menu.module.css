@@ -1,0 +1,142 @@
+.menuWrapper {
+    width: 55%;
+    font-size: 1.2vw;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    width: 100%;
+}
+
+.menu li {
+    list-style-type: none;
+    position: relative;    
+}
+
+.menu li:hover {
+    cursor: pointer;
+}
+
+.menu li::before {
+    content: "";
+    position: absolute;
+    bottom: -7px; 
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.menu li:hover::before {
+    width: calc(100% + 20px); 
+    background-color: var(--primary-color); 
+    animation: underline-expand 0.5s forwards;
+}
+
+.menu a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--primary-light-dark);
+}
+
+.menu_dark a {
+    color: var(--primary-light-grey);
+}
+
+@keyframes underline-expand {
+    0% {
+        left: 50%;
+        width: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.menu .active a {
+    color: var(--primary-color);
+}
+
+.navBtnWrapper {
+    display: none;
+    width: 100%;
+}
+
+.navBtnWrapper svg {
+    height: 3.5vw;
+    width: 3.5vw;
+    fill: var(--primary-light-dark);
+}
+
+@media (max-width: 768px) {
+    .menu  {
+        display: none;
+        position: absolute;
+        box-sizing: border-box;
+        left: 5%;
+        top: 10vw;
+        width: 90%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 3vw 4vw;
+        background-color: var(--primary-light-color);
+    }
+
+    .menu li {
+        width: 100%;
+        padding: 3vw 0;
+        font-size: 2.5vw;
+        border-bottom: 1px solid var(--primary-medium-grey);
+    }
+
+    .menu a {
+        color: var(--primary-light-dark);
+
+    }
+
+    .menu li:hover {
+        cursor: auto;
+    }
+
+    .menu li::before {
+        content: none;
+    }
+
+    .menu li:hover::before {
+        width: 0;
+        background-color: transparent;
+        animation: none;
+    }
+
+    .navBtnWrapper {
+        display: block;
+    }
+
+    .menuWrapper .responsiveNav {
+        display: block;
+    }
+
+    .navBtnWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navBtnWrapper svg {
+        fill: var(--primary-light-grey);
+    }
+
+    .navBtnWrapper svg:hover {
+        cursor: pointer;
+    }
+
+}

@@ -1,0 +1,16 @@
+.resumeItem {
+    margin: 0 1vw;
+    padding-bottom: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    border-bottom: 1px solid var(--primary-grey);
+}
+
+@media (max-width: 768px) {
+    .resumeItem {
+        margin: 0 1.5vw;
+        padding-bottom: 1.5vw;
+        gap: 1vw;
+    }
+}

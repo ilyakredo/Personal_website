@@ -1,0 +1,291 @@
+.contact {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--primary-color);
+    /* font-family: 'Raleway', sans-serif; */
+    padding: 6vw 8vw 6vw 8vw;
+    display: flex;
+    gap: 4vw;
+}
+
+.contactWrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2.5vw;
+    padding-right: 4vw;
+}
+
+.contactWrapper h2 {
+    font-size: 3vw;
+}
+
+.contactWrapper p {
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+}
+
+.personalData {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+}
+
+.personalData p {
+    line-height: normal;
+}
+
+.personalData p:first-child {
+    font-weight: 700;
+}
+
+.personalData div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.personalData div p:first-child {
+    font-weight: 400;
+}
+
+.personalData svg {
+    width: 1.7vw;
+    height: 1.7vw;
+}
+
+.social {
+    width: 100%;
+    display: flex;
+    padding: 1vw 0;
+}
+
+.social ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.social li {
+    list-style-type: none;
+}
+
+.social svg {
+    fill: var(--secondary-color);
+    height: 2vw;
+    width: 2vw;
+    transition: all 0.15s ease-in;
+}
+
+.social svg:hover {
+    fill: var(--primary-hover-light);
+    transform: scale(1.2);
+}
+
+.formWrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2.5vw;
+}
+
+.formWrapper h2 {
+    font-size: 3vw;
+}
+
+.formWrapper form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2.5vw;
+}
+
+.formWrapper label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.2vw;
+}
+
+.formWrapper input {
+    height: 3vw;
+    width: 100%;
+    padding: 0 0.5vw;
+    font-size: 1.3vw;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--icon-grey);
+    transition: border 0.15s ease-in;
+}
+
+.formWrapper input:focus {
+    border: none;
+    border-bottom: 2px solid var(--primary-light-dark);
+    outline: none;
+}
+
+.formWrapper textarea {
+    height: 12vw;
+    width: 100%;
+    padding: 0.7vw 0.5vw 0 0.5vw;
+    font-size: 1.3vw;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--icon-grey);
+    transition: border 0.15s ease-in;
+    resize: none;
+}
+
+.formWrapper textarea:focus {
+    border: none;
+    border-bottom: 2px solid var(--primary-light-dark);
+    outline: none;
+}
+
+.formControls {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+}
+
+.formWrapper button {
+    background-color: var(--primary-dark);
+    padding: 1.2vw 2.5vw;
+    color: var(--primary-light-color);
+    font-size: 1.2vw;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.formWrapper svg {
+    fill: var(--primary-light-color);
+    height: 1.1vw;
+    width: 1.1vw;
+}
+
+.formWrapper button:hover {
+    cursor: pointer;
+    background-color: var(--primary-light-dark);
+}
+
+.statusMessage .msgSuccess {
+    font-size: 1.1vw;
+    font-weight: 700;
+    color: var(--primary-success);
+}
+
+.statusMessage .msgFail {
+    font-size: 1.1vw;
+    font-weight: 700;
+    color: var(--warning-color);
+}
+
+@media (max-width: 768px) {
+    .contact {
+        min-height: auto;
+        padding: 10vw 8vw;
+        flex-direction: column;
+    }
+
+    .contactWrapper {
+        width: 100%;
+        gap: 2.5vw;
+        padding-right: 0;
+    }
+
+    .contactWrapper h2 {
+        font-size: 5vw;
+    }
+    
+    .contactWrapper p {
+        font-size: 2.2vw;
+        line-height: 3.5vw;
+    }
+    
+    .personalData {
+        gap: 0.7vw;
+    }
+    
+    .personalData svg {
+        width: 2vw;
+        height: 2vw;
+    }
+    
+    .social ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap:5vw;
+    }
+    
+    .social svg {
+        height: 4vw;
+        width: 4vw;
+    }
+    
+    .formWrapper {
+        width: 100%;
+        gap: 2.5vw;
+    }
+    
+    .formWrapper h2 {
+        font-size: 5vw;
+    }
+    
+    .formWrapper form {
+        gap: 4.5vw;
+    }
+    
+    .formWrapper label {
+        font-size: 2.2vw;
+    }
+    
+    .formWrapper input {
+        height: 7vw;
+        padding: 0 1.5vw;
+        font-size: 2.5vw;
+    }
+    
+    .formWrapper textarea {
+        height: 20vw;
+        padding: 1.5vw 1.5vw 0 1.5vw;
+        font-size: 2.5vw;
+    }
+    
+    .formControls {
+        padding-top: 3vw;
+    }
+    
+    .formWrapper button {
+        padding: 1.5vw 3.5vw;
+        font-size: 2.6vw;
+        gap: 1vw;
+    }
+    
+    .statusMessage .msgSuccess {
+        font-size: 2.5vw;
+        padding-left: 2vw;
+    }
+    
+    .statusMessage .msgFail {
+        font-size: 2.5vw;
+        padding-left: 2vw;
+    }
+}
+
+
+

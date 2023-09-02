@@ -1,0 +1,150 @@
+.resume {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--primary-light-grey);
+    font-family: 'Raleway', sans-serif;
+    padding: 6vw 8vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume_dark {
+    background-color: var(--bg-dark-secondary);
+    color: var(--primary-light-grey);
+}
+
+.resumeHeading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.resumeHeading > div {
+    background-color: var(--primary-color);
+    font-size: 1.2vw;
+    padding: 0.4vw 0.8vw;
+}
+
+.resume_dark .resumeHeading > div {
+    color: var(--primary-light-dark);
+}
+
+.resumeHeading > h2 {
+    font-size: 3vw;
+    padding-bottom: 4.5vw;
+}
+
+.resumeContent {
+    width: 100%;
+    display: flex;
+}
+
+.resumeContent h3 {
+    font-size: 2vw;
+    padding-bottom: 1.5vw;
+}
+
+.resumeEducationWrapper {
+    width: 50%;
+} 
+
+.resumeExperienceWrapper {
+    width: 50%;
+    
+}
+
+.resumeEducation {
+    border-left: 2px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1.6vw;    
+}
+
+.resumeExperience {
+    border-left: 2px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.download {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 4vw;
+}
+
+.download button {
+    padding: 1.2vw 2.4vw;
+    background-color: var(--primary-light-grey);
+    font-size: 1.3vw;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.download button:hover {
+    cursor: pointer;
+    background-color: var(--primary-dark);
+    color: var(--primary-light-grey);
+}
+
+.resume_dark .download button {
+    background-color: var(--bg-dark-secondary);
+    color: var(--primary-light-grey);
+    border: 1px solid var(--primary-light-grey);
+}
+
+.resume_dark .download button:hover {
+    background-color: var(--primary-light-grey);
+    color: var(--primary-light-dark);
+}
+
+@media (max-width: 768px) {
+    .resume {
+        min-height: auto;
+        padding: 10vw 8vw;
+    }
+    
+    .resumeHeading {
+        gap: 2vw;
+    }
+    
+    .resumeHeading > div {
+        background-color: var(--primary-color);
+        font-size: 1.8vw;
+        padding: 0.6vw 1.2vw;
+    }
+    
+    .resumeHeading > h2 {
+        font-size: 5vw;
+        padding-bottom: 6vw;
+    }
+    
+    .resumeContent {
+        flex-direction: column;
+        gap: 4vw;
+    }
+    
+    .resumeContent h3 {
+        font-size: 3vw;
+        padding-bottom: 1.5vw;
+    }
+    
+    .resumeEducationWrapper {
+        width: 100%;
+    } 
+    
+    .resumeExperienceWrapper {
+        width: 100%;
+    }
+    
+    .download {
+        padding-top: 6vw;
+    }
+    
+    .download button {
+        padding: 1.8vw 3vw;
+        font-size: 2.3vw;
+    }
+}

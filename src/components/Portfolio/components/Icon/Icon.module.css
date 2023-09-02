@@ -1,0 +1,16 @@
+.iconWrapper {
+    position: relative;
+}
+
+.popup {
+    position: absolute;
+    bottom: -2.2vw; 
+    left: 0.5vw;
+    background-color: var(--primary-light-grey);
+    color: var(--primary-light-dark);
+    padding: 0.3vw 0.5vw;
+    border-radius: 5px;
+    z-index: 1000;
+    display: inline-block;
+    white-space: nowrap;
+}
