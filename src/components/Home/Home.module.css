@@ -83,6 +83,7 @@ h1 {
 }
 
 .photoWrapper {
+  margin-top: 1vw;
   width: 35%;
   height: 100%;
   display: flex;
@@ -96,10 +97,13 @@ h1 {
   filter: grayscale(100%);
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .home {
-    min-height: auto;
+    min-height: calc(100vh - 16vw);
     padding-top: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .homeWrapper {
@@ -152,11 +156,54 @@ h1 {
   .photoWrapper {
     padding-top: 4vw;
     width: 100%;
+    display: flex;
     justify-content: center;
   }
   
-  .photoWrapper img {
-    width: 45vh;
+  .photoWrapper picture {
+    width: 100%;
     margin-top: 10vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .photoWrapper picture img {
+    width: 60vw;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+  .home {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    margin-top: 12vh;
+  }
+
+  .homeWrapper {
+    width: 100%;
+  }
+
+  .photoWrapper {
+    padding-top: 1.4vw;
+  }
+
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+  .home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+  }
+
+  .homeWrapper {
+    width: 100%;
+  }
+
+  .photoWrapper {
+    padding-top: 2vw;
   }
 }

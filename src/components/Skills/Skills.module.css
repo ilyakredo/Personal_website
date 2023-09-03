@@ -36,6 +36,7 @@
 }
 
 .skillsWrapper {
+    min-height: auto;
     width: 100%;
     display: grid;
     grid-template-rows: repeat(2, auto);
@@ -46,7 +47,7 @@
 
 @media (max-width: 768px) {
     .skills {
-        min-height: auto;
+        min-height:120%;
         padding: 10vw 8vw;
     }
 
@@ -65,10 +66,30 @@
     }
 
     .skillsWrapper {
+        min-height: auto;
         grid-template-rows: repeat(3, auto);
         grid-template-columns: repeat(4, 1fr);
         gap: 2vw;
         grid-row-gap:12vw;
     }
 
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .skills {
+        min-height:68vh;
+        padding: 6vw 8vw;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .skills {
+        min-height:70vh;
+        padding: 6vw 8vw;
+        display: flex;
+        align-items: center;
+    }
 }

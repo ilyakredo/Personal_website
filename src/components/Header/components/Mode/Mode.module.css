@@ -42,5 +42,27 @@
         width: 5vw;
         height: 5vw;
     }
-    
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .mode {
+        padding-left: 2vw;
+    }
+
+    .mode svg {
+        width: 2.8vw;
+        height: 2.8vw;
+    }
+
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .mode {
+        padding-right: 2vw;
+    }
+
+    .mode svg {
+        width: 2.4vw;
+        height: 2.4vw;
+    }
 }

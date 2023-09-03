@@ -52,6 +52,7 @@ export const Portfolio = ({ mode }) => {
           <PortfolioItem
             ref={index === 3 ? lastVisibleItemRef : null}
             img={portfolioItem.image}
+            imgMinor={portfolioItem.imageMinor}
             addImg={portfolioItem.addImage}
             icon={portfolioItem.icon}
             name={portfolioItem.name}

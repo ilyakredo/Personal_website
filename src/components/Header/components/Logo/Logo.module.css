@@ -47,3 +47,34 @@
         font-size: 9vw;
     }
 }
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .logoWrapper {
+        width: 16%;
+    }
+
+    .logo {
+        font-size: 5vw;
+        padding-bottom: 1.25vw;
+    }
+
+    .logo .logoText {
+        font-size: 6vw;
+    }
+
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .logoWrapper {
+        width: 16%;
+    }
+
+    .logo {
+        font-size: 4.2vw;
+        padding-bottom: 1.1vw;
+    }
+
+    .logo .logoText {
+        font-size: 5.2vw;
+    }
+}

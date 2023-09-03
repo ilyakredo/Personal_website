@@ -7,7 +7,10 @@ import { ImageSlider } from "../ImageSlider/ImageSlider";
 import { Icon } from "../Icon/Icon";
 
 export const PortfolioItem = React.forwardRef(
-  ({ img, addImg, icon, name, desc, visible, techIcons, index }, ref) => {
+  (
+    { img, imgMinor, addImg, icon, name, desc, visible, techIcons, index },
+    ref
+  ) => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [isHoverDenied, setIsHoverDenied] = useState(true);
     const elementRef = useRef(null);
@@ -57,12 +60,13 @@ export const PortfolioItem = React.forwardRef(
         } ${!isHoverDenied ? classes.hoverReady : ""}`}
         onClick={togglePopup}
       >
-        <img
-          src={img}
-          alt={name}
+        <picture
           data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
           data-aos-duration={`${index < 2 ? "800" : "1200"}`}
-        />
+        >
+          <source srcSet={img} type="image/webp" />
+          <img src={imgMinor} alt={name} />
+        </picture>
         {!isPopupOpen && (
           <div className={classes.overlay}>
             <img src={icon} alt="icon" />

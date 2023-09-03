@@ -174,3 +174,24 @@
     }
 
 }
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .menuWrapper {
+        font-size: 1.6vw;
+    }
+    
+    .menu {
+        gap: 1.8vw;
+    }
+
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .menuWrapper {
+        font-size: 1.5vw;
+    }
+    
+    .menu {
+        gap: 1.8vw;
+    }
+}

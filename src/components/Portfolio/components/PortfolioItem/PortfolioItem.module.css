@@ -3,6 +3,9 @@
     overflow: hidden;
     max-height: 0;
     transition: all 0.20s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .portfolioItem:hover {
@@ -16,7 +19,28 @@
 
 .portfolioItem img{
     width: 100%;
-    height: 100%;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1200px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .portfolioItem {
+        height: 35vw;
+    }
+    
+    .portfolioItem img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1200px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .portfolioItem {
+        height: 70vw;
+    }
+    
+    .portfolioItem img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .overlay {
@@ -179,5 +203,17 @@
     .closeBtnWrapper .closeBtn {
         height: 5vw;
         width: 5vw;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .popupContent {
+        padding-top: 11.5%;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .popupContent {
+        padding-top: 11.5%;
     }
 }

@@ -15,7 +15,6 @@ export const Resume = ({ mode }) => {
   return (
     <section
       id="resume"
-      // className={classes.resume}
       className={
         mode === BASE_MODE
           ? classes.resume

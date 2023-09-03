@@ -55,4 +55,8 @@ svg {
     .dataItem .marked {
         font-size: 2.5vw;
     }
+
+    .dataItem .marked {
+        font-size: 3vw;
+    }
 }

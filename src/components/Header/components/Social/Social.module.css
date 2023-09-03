@@ -39,3 +39,16 @@
         display: none;   
     }
 }
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .socialWrapper  {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+    .socialWrapper svg {
+        height: 2.4vw;
+        width: 2.4vw;
+    }
+}

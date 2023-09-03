@@ -3,7 +3,8 @@ import { TypeAnimation } from "react-type-animation";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import classes from "./Home.module.css";
-import photo from "../../assets/images/photo_640_min.png";
+import photoMinor from "../../assets/images/photo_640_min.png";
+import photo from "../../assets/images/photo.webp";
 import { scrollToSection } from "../../helpers/scrolling";
 
 export const Home = () => {
@@ -39,7 +40,10 @@ export const Home = () => {
           </div>
         </div>
         <div className={classes.photoWrapper}>
-          <img data-aos="zoom-in" src={photo} alt="me" />
+          <picture data-aos="zoom-in">
+            <source srcSet={photo} type="image/webp" />
+            <img src={photoMinor} alt="Me" />
+          </picture>
         </div>
       </div>
     </section>

@@ -80,6 +80,9 @@
     background-color: var(--primary-light-grey);
     font-size: 1.3vw;
     transition: background-color 0.5s, color 0.5s;
+    color: var(--primary-light-dark);
+    text-decoration: none;
+    border: 1px solid var(--primary-light-dark);
 }
 
 .download button:hover {
