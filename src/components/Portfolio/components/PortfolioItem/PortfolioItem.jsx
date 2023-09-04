@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import classes from "./PortfolioItem.module.css";
 import { FaRegTimesCircle } from "react-icons/fa";
+import { isSafari } from "react-device-detect";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { ImageSlider } from "../ImageSlider/ImageSlider";
@@ -13,6 +14,7 @@ export const PortfolioItem = React.forwardRef(
   ) => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [isHoverDenied, setIsHoverDenied] = useState(true);
+    const [isSafariOver1200, setIsSafariOver1200] = useState(false);
     const elementRef = useRef(null);
 
     const togglePopup = () => {
@@ -43,6 +45,14 @@ export const PortfolioItem = React.forwardRef(
       }
     }, []);
 
+    useEffect(() => {
+      if (isSafari && window.innerWidth >= 1200) {
+        setIsSafariOver1200(true);
+      } else {
+        setIsSafariOver1200(false);
+      }
+    }, []);
+
     React.useImperativeHandle(ref, () => ({
       togglePopup,
     }));
@@ -57,7 +67,9 @@ export const PortfolioItem = React.forwardRef(
         }}
         className={`${classes.portfolioItem} ${
           visible ? classes.visible : ""
-        } ${!isHoverDenied ? classes.hoverReady : ""}`}
+        } ${!isHoverDenied ? classes.hoverReady : ""} ${
+          isSafariOver1200 ? classes.safariOver1200 : ""
+        }`}
         onClick={togglePopup}
       >
         <picture
