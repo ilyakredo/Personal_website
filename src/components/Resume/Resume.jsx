@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { isSafari } from "react-device-detect";
 import classes from "./Resume.module.css";
 import { educationDataArr, experienceDataArr } from "../../assets/data/data";
 import { ResumeItem } from "./components/ResumeItem/ResumeItem";
@@ -8,18 +9,29 @@ import cv from "../../assets/CV_Illia_Moiseienko.pdf";
 import { BASE_MODE } from "../../assets/constants";
 
 export const Resume = ({ mode }) => {
+  const [isSafariLess750, setIsSafariLess750] = useState(false);
+
   useEffect(() => {
     Aos.init({ once: true });
+  }, []);
+
+  useEffect(() => {
+    if (isSafari && window.innerWidth <= 750) {
+      setIsSafariLess750(true);
+    } else {
+      setIsSafariLess750(false);
+    }
   }, []);
 
   return (
     <section
       id="resume"
-      className={
-        mode === BASE_MODE
-          ? classes.resume
-          : `${classes.resume} ${classes.resume_dark}`
-      }
+      className={`
+        ${
+          mode === BASE_MODE
+            ? classes.resume
+            : `${classes.resume} ${classes.resume_dark}`
+        } ${isSafariLess750 ? classes.safariLess750 : ""}`}
     >
       <div className={classes.resumeHeading}>
         <div>Resume</div>
@@ -37,6 +49,7 @@ export const Resume = ({ mode }) => {
               <ResumeItem
                 mode={mode}
                 data={education}
+                isSafariLess750={isSafariLess750}
                 subject={"edu"}
                 key={education.id}
               />
@@ -51,7 +64,12 @@ export const Resume = ({ mode }) => {
           <h3>My Experience</h3>
           <div className={classes.resumeExperience}>
             {experienceDataArr.map((education) => (
-              <ResumeItem mode={mode} data={education} key={education.id} />
+              <ResumeItem
+                mode={mode}
+                data={education}
+                isSafariLess750={isSafariLess750}
+                key={education.id}
+              />
             ))}
           </div>
         </div>

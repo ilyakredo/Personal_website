@@ -1,19 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { isSafari } from "react-device-detect";
 import classes from "./Home.module.css";
 import photoMinor from "../../assets/images/photo_640_min.png";
 import photo from "../../assets/images/photo.webp";
 import { scrollToSection } from "../../helpers/scrolling";
 
 export const Home = () => {
+  const [isSafariLess750, setIsSafariLess750] = useState(false);
+
   useEffect(() => {
     Aos.init({ duration: 1200 });
   }, []);
 
+  useEffect(() => {
+    if (isSafari && window.innerWidth <= 750) {
+      setIsSafariLess750(true);
+    } else {
+      setIsSafariLess750(false);
+    }
+  }, []);
+
   return (
-    <section id="home" className={classes.home}>
+    <section
+      id="home"
+      // className={classes.home}
+      className={`${classes.home} ${
+        isSafariLess750 ? classes.safariLess750 : ""
+      }`}
+    >
       <div className={classes.homeWrapper}>
         <div className={classes.greetWrapper}>
           <h1>Hi, my name is Illia, I'm a</h1>

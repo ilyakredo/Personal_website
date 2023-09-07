@@ -7,6 +7,10 @@
     border-bottom: 1px solid var(--primary-grey);
 }
 
+.safariLess750 .resumeItem {
+    margin-bottom: 1.1vw;
+}
+
 @media (max-width: 768px) {
     .resumeItem {
         margin: 0 1.5vw;

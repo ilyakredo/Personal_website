@@ -27,6 +27,10 @@
     padding: 0.4vw 0.8vw;
 }
 
+.safariLess750 .resumeHeading > div {
+    margin-bottom: 2vw;
+}
+
 .resume_dark .resumeHeading > div {
     color: var(--primary-light-dark);
 }
@@ -49,6 +53,10 @@
 .resumeEducationWrapper {
     width: 50%;
 } 
+
+.safariLess750 .resumeEducationWrapper {
+    margin-bottom: 3vw;
+}
 
 .resumeExperienceWrapper {
     width: 50%;   

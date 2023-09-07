@@ -21,15 +21,27 @@
     font-size: 3vw;
 }
 
+.safariLess750 .contactWrapper h2 {
+    margin-bottom: 2vw;
+}
+
 .contactWrapper p {
     font-size: 1.5vw;
     line-height: 2.5vw;
+}
+
+.safariLess750 .contactWrapper p {
+    margin-bottom: 2vw;
 }
 
 .personalData {
     display: flex;
     flex-direction: column;
     gap: 0.3vw;
+}
+
+.safariLess750 .personalData {
+    margin-bottom: 2vw;
 }
 
 .personalData p {
@@ -73,6 +85,10 @@
     list-style-type: none;
 }
 
+.safariLess750 .social li {
+    margin-right: 3.5vw;
+}
+
 .social svg {
     fill: var(--secondary-color);
     height: 2vw;
@@ -96,6 +112,10 @@
 
 .formWrapper h2 {
     font-size: 3vw;
+}
+
+.safariLess750 .formWrapper h2 {
+    margin-bottom: 2vw;
 }
 
 .formWrapper form {

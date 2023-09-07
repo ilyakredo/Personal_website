@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.safariLess750 .iconWrapper {
+    margin-right: 1.5vw;
+}
+
 svg {
     width: 1.5vw;
     height: 1.5vw;

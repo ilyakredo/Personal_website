@@ -26,6 +26,10 @@
     padding: 0.4vw 0.8vw;
 }
 
+.safariLess750 .skillsHeading div {
+    margin-bottom: 2vw;
+}
+
 .skills_dark .skillsHeading div {
     color: var(--primary-light-dark);
 }

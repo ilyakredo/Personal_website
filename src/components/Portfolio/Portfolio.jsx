@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { isSafari } from "react-device-detect";
 import { FaArrowAltCircleDown, FaArrowAltCircleUp } from "react-icons/fa";
 import classes from "./Portfolio.module.css";
 import { portfolioDataArr } from "../../assets/data/data";
@@ -12,6 +13,7 @@ export const Portfolio = ({ mode }) => {
   const [showAll, setShowAll] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [triggerMessage, setTriggerMessage] = useState("show more");
+  const [isSafariLess750, setIsSafariLess750] = useState(false);
   const triggerRef = useRef(null);
   const lastVisibleItemRef = useRef(null);
 
@@ -34,14 +36,23 @@ export const Portfolio = ({ mode }) => {
     Aos.init({ once: true });
   }, []);
 
+  useEffect(() => {
+    if (isSafari && window.innerWidth <= 750) {
+      setIsSafariLess750(true);
+    } else {
+      setIsSafariLess750(false);
+    }
+  }, []);
+
   return (
     <section
       id="portfolio"
-      className={
-        mode === BASE_MODE
-          ? classes.portfolio
-          : `${classes.portfolio} ${classes.portfolio_dark}`
-      }
+      className={`
+        ${
+          mode === BASE_MODE
+            ? classes.portfolio
+            : `${classes.portfolio} ${classes.portfolio_dark}`
+        } ${isSafariLess750 ? classes.safariLess750 : ""}`}
     >
       <div className={classes.portfolioHeading}>
         <div>Portfolio</div>

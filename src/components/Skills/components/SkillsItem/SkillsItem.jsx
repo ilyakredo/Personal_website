@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import classes from "./SkillsItem.module.css";
 import { BASE_MODE } from "../../../../assets/constants";
 
-export const SkillsItem = ({ icon, title, url, percentage, color, mode }) => {
+export const SkillsItem = ({
+  icon,
+  title,
+  url,
+  percentage,
+  color,
+  mode,
+  isSafariLess750,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -20,11 +28,12 @@ export const SkillsItem = ({ icon, title, url, percentage, color, mode }) => {
 
   return (
     <div
-      className={
-        mode === BASE_MODE
-          ? classes.skillsItem
-          : `${classes.skillsItem} ${classes.skillsItem_dark}`
-      }
+      className={`
+        ${
+          mode === BASE_MODE
+            ? classes.skillsItem
+            : `${classes.skillsItem} ${classes.skillsItem_dark}`
+        } ${isSafariLess750 ? classes.safariLess750 : ""}`}
     >
       <a href={url} target="_blank" rel="noopener noreferrer">
         <div

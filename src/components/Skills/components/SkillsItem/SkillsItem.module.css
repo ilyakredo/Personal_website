@@ -6,11 +6,19 @@
     gap: 1.5vw;
 }
 
+.safariLess750 .skillsItem {
+    margin-bottom: 1.5vw;
+}
+
 .skillsItem svg {
     width: 5vw;
     height: 5vw;
     fill: var(--secondary-color);
     transition: transform 0.3s ease-in-out;
+}
+
+.safariLess750 .skillsItem svg {
+    margin-bottom: 0.5vw;
 }
 
 .skillsItem_dark svg {
@@ -24,6 +32,10 @@
 .skillsItem p {
     font-size: 1.5vw;
     font-weight: 700;
+}
+
+.safariLess750 .skillsItem p {
+    margin-bottom: 0.5vw;
 }
 
 .barWrapper {

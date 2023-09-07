@@ -54,6 +54,10 @@ h1 {
   margin-top: 3vw;
 }
 
+.safariLess750 .handleWrapper button {
+  margin-right: 10vw;
+}
+
 .handleWrapper button {
   border: none;
   background-color: var(--primary-dark);
@@ -93,6 +97,14 @@ h1 {
 
 .photoWrapper img {
   width: 32vw;
+  /* height: 32vw; */
+  margin-top: 4.5vw;
+  filter: grayscale(100%);
+}
+
+.safariLess750 .photoWrapper img {
+  width: 55vw;
+  height: 55vw;
   margin-top: 4.5vw;
   filter: grayscale(100%);
 }

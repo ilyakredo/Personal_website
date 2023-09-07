@@ -30,6 +30,10 @@
     padding: 0.4vw 0.8vw;
 }
 
+.safariLess750 .aboutHeading  div {
+    margin-bottom: 2vw;
+}
+
 .about_dark .sectionLable {
     color: var(--primary-light-dark);
 }

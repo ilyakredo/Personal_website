@@ -10,9 +10,13 @@ import {
 import classes from "./ResumeItem.module.css";
 import { DataItem } from "./DataItem/DataItem";
 
-export const ResumeItem = ({ data, subject, mode }) => {
+export const ResumeItem = ({ data, subject, isSafariLess750, mode }) => {
   return (
-    <div className={classes.resumeItem}>
+    <div
+      className={`${classes.resumeItem} ${
+        isSafariLess750 ? classes.safariLess750 : ""
+      }`}
+    >
       {subject === "edu" ? (
         <>
           <DataItem
@@ -20,18 +24,26 @@ export const ResumeItem = ({ data, subject, mode }) => {
             icon={<FaTrophy />}
             data={data.title}
             important={true}
+            isSafariLess750={isSafariLess750}
           />
           <DataItem
             mode={mode}
             icon={<FaBuildingColumns />}
             data={data.institution}
+            isSafariLess750={isSafariLess750}
           />
-          <DataItem mode={mode} icon={<FaClock />} data={data.duration} />
+          <DataItem
+            mode={mode}
+            icon={<FaClock />}
+            data={data.duration}
+            isSafariLess750={isSafariLess750}
+          />
           <DataItem
             mode={mode}
             icon={<FaCircleInfo />}
             data={data.description}
             dataDesc={data.descriptionSubject}
+            isSafariLess750={isSafariLess750}
           />
         </>
       ) : (
@@ -41,18 +53,26 @@ export const ResumeItem = ({ data, subject, mode }) => {
             icon={<FaBriefcase />}
             data={data.title}
             important={true}
+            isSafariLess750={isSafariLess750}
           />
           <DataItem
             mode={mode}
             icon={<FaBuildingUser />}
             data={data.employer}
+            isSafariLess750={isSafariLess750}
           />
-          <DataItem mode={mode} icon={<FaClock />} data={data.duration} />
+          <DataItem
+            mode={mode}
+            icon={<FaClock />}
+            data={data.duration}
+            isSafariLess750={isSafariLess750}
+          />
           <DataItem
             mode={mode}
             icon={<FaStar />}
             data={data.jobDesc}
             expDesc={true}
+            isSafariLess750={isSafariLess750}
           />
         </>
       )}

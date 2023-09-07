@@ -10,6 +10,7 @@ import {
 import { MdSend } from "react-icons/md";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { isSafari } from "react-device-detect";
 import classes from "./Contact.module.css";
 import {
   DEFAULT_TIMEOUT,
@@ -24,6 +25,7 @@ export const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSafariLess750, setIsSafariLess750] = useState(false);
 
   const form = useRef();
 
@@ -89,8 +91,21 @@ export const Contact = () => {
     Aos.init({ once: true });
   }, []);
 
+  useEffect(() => {
+    if (isSafari && window.innerWidth <= 750) {
+      setIsSafariLess750(true);
+    } else {
+      setIsSafariLess750(false);
+    }
+  }, []);
+
   return (
-    <section id="contact" className={classes.contact}>
+    <section
+      id="contact"
+      className={`${classes.contact} ${
+        isSafariLess750 ? classes.safariLess750 : ""
+      }`}
+    >
       <div
         className={classes.contactWrapper}
         data-aos="fade-right"
