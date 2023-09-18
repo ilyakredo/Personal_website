@@ -101,7 +101,7 @@ export const qualityDescriptionArr = [
 export const detailsArr = [
   { id: 1, detailDesc: "Name", detailValue: "Illia Moiseienko" },
   { id: 2, detailDesc: "Email", detailValue: "illia.moiseienko@gmail.com" },
-  { id: 3, detailDesc: "Phone", detailValue: "+38(050) 974-38-46" },
+  { id: 3, detailDesc: "Phone", detailValue: "+1(368)299-3665" },
   { id: 4, detailDesc: "Location", detailValue: "Calgary, AB, Canada" },
 ];
 
